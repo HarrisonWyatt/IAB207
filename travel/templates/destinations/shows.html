@@ -8,7 +8,7 @@
     <div class="row mt-5 mb-3">  
       <div class="col-md-12">  
         <div class="float-left">  
-          <h1 class="mb-0">Italy</h1>  
+          <h1 class="mb-0">{{destination.name}}</h1>  
           <p>Popular Destination</p>  
         </div>  
  
@@ -53,7 +53,7 @@
       {{wtf.render_form(form,"/destinations/{0}/comment".format(destination.id))}} 
       {% for comment in destination.comments %}
       <div class="col-md-12">  
-        <b>{{comment.user}} <span class="ml-2 text-muted">January 2017</span></b>  Cr
+        <b>{{comment.user.name}} <span class="ml-2 text-muted">January 2017</span></b>  Cr
         <p>{{comment.text}}</p>  
       </div> 
       {% endfor %} 
